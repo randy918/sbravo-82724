@@ -1,0 +1,109 @@
+:root {
+  --gap: 1rem;
+}
+
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/LibreFranklin-Romans.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/LibreFranklinItalic.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Montserrat-VF.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Montserrat-Italic-VF.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-VariableFont_wght.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-Italic-VariableFont_wght.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../fonts/RobotoFlex.woff2");
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-VariableFont_wght.woff2");
+}
+.flex {
+  display: flex;
+  gap: var(--gap);
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 2em;
+}
+
+html {
+  font-size: 2rem;
+  line-height: 1.618;
+  color: rgb(194, 47, 51);
+  font-family: "Roboto Slab";
+  font-variation-settings: "wght" 700;
+}
+
+h1 {
+  color: green;
+}
+
+p {
+  color: rgb(194, 47, 51);
+  line-height: 1.618;
+  font-family: "Gotham";
+  font-variation-settings: "wght" 500;
+}
+
+.italic {
+  font-style: italic;
+  color: red;
+}
+
+.fs1 {
+  font-size: 1vw;
+}
+.fs2 {
+  font-size: 2vw;
+}
+.fs3 {
+  font-size: 3vw;
+}
+.fs4 {
+  font-size: 4vw;
+}
+
+.fr1 {
+  font-size: 1rem;
+}
+.fr2 {
+  font-size: 2rem;
+}
+.fr3 {
+  font-size: 3rem;
+}
+.fr4 {
+  font-size: 4rem;
+}/*# sourceMappingURL=utility.css.map */

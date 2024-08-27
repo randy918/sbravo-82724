@@ -1,0 +1,179 @@
+//!  31222.1856         UTILITY CLASSES
+
+//!  31222.1856         1.1   VARIABLE PRESETS
+//!  31222.1856         1.2   SASS VARIABLES
+//!  31222.1856         1.3   SASS FUNCTIONS
+
+//!  31222.1856         3.1   DISPLAY
+//!  31222.1856         3.2   CONTAINER
+
+//!  31222.1856         5.1   @FONT-FACE
+//!  31222.1856         5.2   font utility
+//!  31222.1856         5.3   H-SERIES
+
+//!  31222.1856         9.9   END
+//!  4-19-22.2301  __________________________________________________________
+
+//!  31222.1856         1.1   VARIABLE PRESETS
+
+:root {
+  --gap: 1rem;
+}
+
+//!  31222.1856         1.2   SASS VARIABLES
+
+$colors: (
+  bg: rgba(55, 66, 76, 1),
+  theBlue: rgba(26, 161, 217, 1),
+  theDarkGray: rgba(43, 50, 56, 1),
+  theGray: rgb(78, 92, 107),
+  theGreen: rgba(0, 173, 43, 1),
+  theRed: rgba(194, 47, 51, 1),
+  theYellow: rgb(253, 247, 159),
+);
+
+//!  31222.1856         5.1   @FONT-FACE
+
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/LibreFranklin-Romans.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/LibreFranklinItalic.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Montserrat-VF.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Montserrat-Italic-VF.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-VariableFont_wght.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-Italic-VariableFont_wght.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../fonts/RobotoFlex.woff2");
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-VariableFont_wght.woff2");
+}
+
+
+
+//!  31222.1856         1.3   SASS FUNCTIONS
+
+@function getColor($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+//!  31222.1856         3.1   DISPLAY
+
+//!  31222.1856         3.21   FLEX
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+  justify-content: flex-start;
+  align-items: stretch;
+}
+// justify-content(h): flex-start, center, flex-end, space around, space between
+// align-items(v): flex-start, center, flex-end, baseline, between
+//!  31222.1856         3.22   FLEX horizontal justification (justify content)
+
+
+
+
+//!  31222.1856         3.31   GRID
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+  //!  31222.1856         3.15   DISPLAY FLEX
+
+  //!  31222.1856         3.2   CONTAINER
+
+  // NOTE padding-inline is newer, horizontal sides only
+  // NOTE may need to turn max-width to a --var
+  .container {
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 2em;
+  }
+
+  //!  31222.1856         5.1   TYPE
+
+  //!  31222.1856         5.2   font general
+
+html {
+    font-size: 2rem;
+    //   font-style: italic;
+    line-height: 1.618;
+    color: getColor(theRed);
+    font-family: "Roboto Slab";
+    font-variation-settings: "wght" 700;
+  }
+  //!  31222.1856         5.3   H-SERIES
+  
+h1 {
+  color: green;
+}
+
+p {
+  color: getColor(theRed);
+  line-height: 1.618;
+    font-family: "Gotham";
+    font-variation-settings: "wght" 500;
+}
+
+.italic {
+    font-style: italic;
+    color:red;
+  }
+
+  //!  31222.1856         5.4   H-SERIES
+
+  .fs {
+    &1 {
+      font-size: 1vw;
+    }
+    &2 {
+      font-size: 2vw;
+    }
+    &3 {
+      font-size: 3vw;
+    }
+    &4 {
+      font-size: 4vw;
+    }
+  }
+
+.fr {
+    &1 {
+    font-size: 1rem;
+    }
+    &2 {
+    font-size: 2rem;
+    }
+    &3 {
+    font-size: 3rem;
+    }
+    &4 {
+    font-size: 4rem;
+    }
+}

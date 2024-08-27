@@ -1,0 +1,744 @@
+$colors: (bg: rgba(55, 66, 76, 1),
+    theGreen: rgba(0, 173, 43, 1),
+    theRed: rgba(194, 47, 51, 1),
+    theOrange: rgba(255, 103, 0, 1),
+    theRodeoPink: #f1a1a4,
+    theRodeoBlue: #7f86b0,
+    theYellow: rgb(221, 172, 94),
+    theGray: rgb(78, 92, 107),
+    theBackground: rgba(241, 227, 214, 1),
+    theDarkGray: rgba(43, 50, 56, 1),
+    theBrown: rgba(101, 42, 36, 1),
+    bitByBitRed: rgba(240, 44, 80, 1),
+    bitByBitBlue: rgba(0, 79, 136, 1),
+    bitByBitBlonde: rgba(241, 227, 214, 1),
+    coolGrey50: rgb(245, 247, 250),
+    coolGrey100: rgb(228, 231, 235),
+    coolGrey200: rgb(203, 210, 217),
+    coolGrey300: rgb(154, 165, 177),
+    coolGrey400: rgb(123, 135, 148),
+    coolGrey500: rgb(97, 110, 124),
+    coolGrey600: rgb(82, 96, 109),
+    coolGrey700: rgb(62, 76, 89),
+    coolGrey800: rgb(50, 63, 75),
+    coolGrey900: rgb(31, 41, 51),
+    grey200: rgb(255, 255, 255),
+    grey400: rgb(170, 170, 170),
+    grey600: rgb(61, 61, 61),
+    grey800: rgb(33, 33, 33),
+    grey1000: rgb(24, 24, 24),
+    grey5000: rgb(12, 12, 12),
+    grey10000: rgb(0, 0, 0),
+    hadiannaBlueOne: rgb(75, 160, 192),
+    hadiannaBlueTwo: rgb(96, 176, 203),
+    hadiannaBlueThree: rgb(161, 224, 249),
+    hadiannaBlueFour: rgb(87, 182, 217),
+    hadiannaOrangeOne: rgb(191, 123, 75),
+    hadiannaOrangeFour: rgb(217, 141, 87),
+    hadiannaSalmonOne: rgb(229, 120, 103),
+    hadiannaSalmonFour: rgb(255, 133, 115),
+
+
+);
+
+@function getColor($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+* {
+
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        border: none;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
+
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+
+@font-face {
+    font-family: "palatino_lt_stdblack";
+    src: url("/./fonts/palatinoltstd_black-webfont.woff2") format("woff2"),
+        url("/./fonts/palatinoltstd_black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "palatino_lt_stdbold";
+    src: url("/./fonts/palatinoltstd_bold-webfont.woff2") format("woff2"),
+        url("/./fonts/palatinoltstd_bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "palatino_lt_stditalic";
+    src: url("/./fonts/palatinoltstd_italic-webfont.woff2") format("woff2"),
+        url("/./fonts/palatinoltstd_italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "palatino_lt_stdroman";
+    src: url("/./fonts/palatinoltstd_roman-webfont.woff2") format("woff2"),
+        url("/./fonts/palatinoltstd_roman-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "palatino_lt_stdbold";
+    font-size: 6vw;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 3vw;
+    font-weight: 100;
+    color: black;
+    //   opacity: 0.7;
+}
+
+h3 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: black;
+    //   opacity: 0.7;
+    text-align: center;
+    line-height: 1;
+    padding-top: 1vw;
+}
+
+h5 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 2.25vw;
+    font-weight: 300;
+    color: black;
+    //   background-color: black;
+    //   opacity: 0.7;
+    padding-top: 0;
+    margin-top: 2vw;
+}
+
+h6 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 1.5vw;
+    font-weight: 300;
+    color: black;
+    opacity: 0.7;
+    padding-top: 0vw;
+    margin-top: 0;
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
+h7 {
+    //   background-color: black;
+    //   opacity: 0.7;
+    //   padding-top: 0;
+    //   margin-top: 1vw;
+    //   margin-bottom: 3vw;;
+}
+
+.mail-to {
+    font-family: "palatino_lt_stdroman";
+    text-decoration: none;
+    font-size: 1.45vw;
+    line-height: 2.75vw;
+    color: getColor(hadiannaSalmonFour);
+    margin-bottom: -1vw;
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+
+.instagram-container {
+    display: inline;
+    padding-bottom: 0;
+    line-height: 0;
+    margin-bottom: 0vw;
+    text-align: center;
+}
+
+.small-type {
+
+    font-size: 1vw;
+}
+
+.small-type:hover {
+
+    font-color: white;
+}
+
+.instagram {
+    display: inline;
+    width: 6vw;
+    padding-top: 1vw;
+    margin-bottom: 0vw;
+    padding-left: 2vw;
+}
+
+.papa {
+    margin-top: -0.5vw;
+}
+
+#Layer_1 svg:hover {
+    fill: black;
+}
+
+body {
+    background-color: getColor(hadiannaSalmonOne);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: min(1300px, calc(80% + 100px));
+    min-width: 0;
+    caret-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+
+    //   width: min(1000px, calc(70% + 100px));
+}
+
+.grid__container {
+    display: grid;
+    width: 95vw;
+    flex-flow: row;
+    gap: 1.75vw;
+    //   margin: auto;
+    //   width: min(60vw, 500px);
+    //   width: max(30vw, 500px);
+
+    //   overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.75fr 1fr;
+
+    height: 91vh;
+    margin: 2rem;
+
+    grid-template-areas:
+        "header header"
+        "display display"
+        // "welcome welcome"
+        "subhead subhead"
+        // "portfolio-pa-tt portfolio-pa-nah"
+        // "portfolio-pa-tr portfolio-filler"
+        // "subhead2 subhead2"
+        // "portfolio-f-p portfolio-f-bb"
+        // "portfolio-f-c portfolio-f-m"
+        // "escapes escapes"
+        // "portfolio-gci portfolio-lt"
+        // "managed managed"
+        // "bye bye";
+        // "footer fomoter";
+
+        align-items: start;
+    justify-content: center;
+}
+
+// .welcome-block {
+
+// background-color: black;
+
+// }
+
+.grid__item {
+    background-color: getColor(hadiannaSalmonFour);
+}
+
+.grid__header {
+    grid-area: header;
+    background-color: black;
+    padding-top: 3vw;
+    padding-bottom: 1.5vw;
+}
+
+.grid__display {
+    grid-area: display;
+    // padding: 2vw;
+    //    max-height: 330px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.grid__subhead {
+    grid-area: subhead;
+}
+
+.grid__subhead2 {
+    grid-area: subhead2;
+}
+
+.grid__escapes {
+    grid-area: escapes;
+}
+
+.grid__welcome {
+    grid-area: welcome;
+    background-image: url("/./img/10-01-22.1901-hadianna-black-welcome.png");
+    width: 76vw;
+    height: 23vw;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 3vw;
+}
+
+.grid__bye {
+
+    grid-area: bye;
+    background-color: getColor(hadiannaSalmonOne);
+}
+
+.flex__welcome {
+    position: relative;
+    color: white;
+    top: 1.25vw;
+    left: 0.75vw;
+}
+
+.italic {
+    font-family: "palatino_lt_stditalic";
+    color: white;
+}
+
+.background--color__black {
+
+
+    background-color: black;
+
+}
+
+.font--color__white {
+
+    color: white;
+
+}
+
+.invisible {}
+
+.lh--1 {
+    line-height: 1;
+
+}
+
+.welcome-2 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 1.75vw;
+    font-weight: 300;
+    flex: absolute;
+    color: white;
+    left: 0vw;
+}
+
+.grid__managed {
+    grid-area: managed;
+    background-color: black;
+    padding-top: 2vw;
+}
+
+.grid__sidebar {
+    grid-area: sidebar;
+    min-width: 100px;
+    text-align: center;
+}
+
+.grid__portfolio {
+    &-gci {
+        grid-area: portfolio-gci;
+        padding-bottom: 0vw;
+    }
+
+    &-pa-tt {
+        grid-area: portfolio-pa-tt;
+    }
+
+    &-pa-nah {
+        grid-area: portfolio-pa-nah;
+    }
+
+    &-pa-transition {
+        grid-area: portfolio-pa-tr;
+    }
+
+    &-f-p {
+        grid-area: portfolio-f-p;
+    }
+
+    &-f-bb {
+        grid-area: portfolio-f-bb;
+    }
+
+    &-f-c {
+        grid-area: portfolio-f-c;
+    }
+
+    &-f-m {
+        grid-area: portfolio-f-m;
+    }
+
+    &-lt {
+        grid-area: portfolio-lt;
+    }
+
+    &-filler {
+        grid-area: portfolio-filler;
+    }
+}
+
+.grid__footer {
+    grid-area: footer;
+    //   padding: 1rem;
+    padding-top: 1vw;
+    padding-bottom: 0.5vw;
+}
+
+.flex__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.75), 0px 8px 13px rgba(0, 0, 0, 0.21),
+        0px 18px 23px rgba(0, 0, 0, 0.21);
+}
+
+h4 {
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5), 0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h8 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 1.75vw;
+
+    color: white;
+    // position: absolute;
+}
+
+.h9 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    line-height: 1.25;
+}
+
+.h10 {
+    font-family: "palatino_lt_stdroman";
+    font-size: 1.75vw;
+    text-align: center;
+    color: white;
+    padding-left: 0vw;
+    padding-bottom: 2vw;
+    padding-top: vw;
+}
+
+.h11 {
+    display: flex;
+    font-family: "palatino_lt_stdroman";
+    font-size: 1.75vw;
+    text-align: center;
+    color: white;
+}
+
+a.button1 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: .5em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "palatino_lt_stdroman";
+    font-size: 2vw;
+    line-height: 1.25;
+    width: 66vw;
+    background-color: getColor(hadiannaSalmonFour);
+    color: black;
+    margin-left: 5vw;
+    margin-bottom: 2.5vw;
+    text-align: center;
+    transition: all 0.4s;
+
+    &:hover {
+
+        color: black;
+        background-color: getColor(hadiannaBlueFour);
+
+    }
+}
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.black {
+
+    //   background-color: black;
+
+
+
+}
+
+.trythis {
+    padding-left: 2vw;
+    padding-top: 0;
+    margin-top: -8vw;
+    float: left;
+}
+
+.has-dropcap:first-letter {
+    font-size: 6vw;
+    line-height: 0.5;
+    float: left;
+    margin: 0.25em 0.1em 0.1em 0;
+}
+
+.doit {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    z-index: 1000;
+}
+
+.visit {
+    margin-top: -3vw;
+    width: 25%;
+    padding-bottom: 2vw;
+    display: block;
+    margin: auto;
+}
+
+.visit:hover {
+    filter: brightness(0) invert(1);
+}
+
+.visit2 {
+    margin-top: -3vw;
+    width: 25%;
+    padding-bottom: 4.35vw;
+    display: block;
+    margin: auto;
+}
+
+.visit2:hover {
+    filter: brightness(0) invert(1);
+}
+
+.flex__display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.flex__subhead {
+    padding-top: 1.5vw;
+    padding-bottom: .5vw;
+}
+
+.flex__subhead2 {
+    padding-top: 2vw;
+    padding-bottom: 0vw;
+}
+
+.flex__escapes {
+    padding-top: 2vw;
+    padding-bottom: 0vw;
+}
+
+.flex__welcome {
+    padding-top: 2vw;
+    padding-bottom: 0vw;
+    //   background-color: black;
+    color: black;
+    position: relative;
+}
+
+.flex__managed {
+
+    color: white;
+}
+
+.welcome-background {
+    background-image: url("/./img/10-01-22.1901-hadianna-black-welcome.png");
+    background-position: center;
+    height: 7vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    //   vertical-align: middle;
+    //   object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+a {
+    position: relative;
+}
+
+.img-container img:first-child {
+    position: relative;
+}
+
+.img-container img:last-child {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.img-container:hover img:last-child {
+    opacity: 1;
+}
+
+img {
+    border-radius: 0.25rem;
+}
+
+.text-a {
+    position: absolute;
+    top: 52vw;
+    left: 11vw;
+    font-size: 3.5vw;
+    z-index: 100;
+}
+
+.swiper {
+    height: 100%;
+    background-color: getColor(hadiannaSalmonOne);
+}
+
+.swiper-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.swiper-slide {
+    width: 100% !important;
+}
+
+.swiper-slide img {
+    background-color: red;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    border-radius: 0.125rem;
+}
+
+#swiper-1 .swiper-pagination {
+    bottom: 1vw;
+}
+
+#swiper-1 .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: white;
+}
+
+#swiper-1 .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: red;
+}
+
+.swiper-title-1 {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    color: white;
+}
+
+.swiper-title-2 {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    color: white;
+}
+
+.swiper-title-3 {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    color: white;
+}
+
+.swiper-title-4 {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    color: white;
+}
+
+/*! section ONE proof of concept */
+
+section.section__one {
+    background: blue;
+
+    & .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 1em;
+        grid-gap: 1em;
+
+    }
+}
+
+.box {
+
+    display: flex;
+    justify-content: center;
+    background-color: green;
+
+}
